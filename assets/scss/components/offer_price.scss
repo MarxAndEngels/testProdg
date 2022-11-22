@@ -1,0 +1,43 @@
+.offer__price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  margin: 8px 0;
+  &.offer__price--small {
+    font-size: 14px;
+  }
+
+  &.offer__price--short {
+    font-size: 16px;
+  }
+
+  &.offer__price--long {
+    font-size: 18px;
+  }
+
+  &.offer__price--page {
+    font-size: 20px;
+  }
+}
+
+.offer__price-actual {
+  color: $mainColor;
+  font-weight: bold;
+  font-size: 1.5em;
+  @media screen and (max-width: $mobile){
+      font-size: 1.25em;
+  }
+  @media screen and (max-width: 326px){
+    font-size: 1.1em;
+}
+}
+
+.offer__price-credit {
+  font-weight: 500;
+  font-size: 1em;
+  margin-left: auto;
+  @media screen and (max-width: $mobile){
+      font-size: 0.7em;
+  }
+}

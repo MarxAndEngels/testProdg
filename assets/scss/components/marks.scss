@@ -1,0 +1,159 @@
+.marks__list {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 24px 0 0;
+  gap: 8px;
+  @media screen and (max-width: $small-desktop) {
+    height: 380px;
+  }
+  @media screen and (max-width: $tablet) {
+   height: 400px;
+  }
+  @media screen and (max-width: $mobile) {
+    gap: 0;
+    height: 240px;
+    &.marks__list--full{
+      height: 660px;
+    }
+  }
+}
+.marks__list--item {
+  position: relative;
+  padding: 5px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $black;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid  $lightGrey;
+  @media screen and (max-width: $tablet) {
+    width: calc(50% - 6px);
+    font-size: 14px;
+    padding: 6px 12px; 
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: 13px;
+  }
+  &.nuxt-link-active {
+    background: $lightGrey;
+    color: $black;
+    .list__item-number {
+      // color: $mainColorHover;
+    }
+  }
+
+  &:hover {
+    background: $grey;
+  }
+
+  .list__item-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .list__item-number {
+    margin-left: 8px;
+    background-color: $grey;
+    padding: 4px 6px;
+    border-radius: 50%;
+    color: rgb(101, 101, 101);
+    font-weight: 600;
+    font-size: 14px;
+    transition: .24s;
+  }
+  .list__item-icon{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
+}
+
+.show__more{
+  display: none;
+  color: $blue;
+  font-size: 16px;
+  @media screen and (max-width: $mobile){
+    display: block;
+    text-align: right;
+  }
+}
+.folders__list , .generations__list{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.folders__list-item ,.generations__list-item{
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $black;
+  text-decoration: none;
+  cursor: pointer;
+  background: $lightGrey;
+  &.nuxt-link-active {
+    background: $grey;
+    color: $mainColorHover;
+    .list__item-number {
+      color: $mainColorHover;
+    }
+  }
+}
+
+.folders__list-item-number, .generations__list-item-number{
+  margin-left: 8px;
+  color: $mainColor;
+  font-weight: 600;
+  font-size: 14px;
+  transition: .24s;
+}
+
+
+.wrapper__emblems{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding: 0 20px;
+}
+
+.wrapper__emblems_title{
+  font-size: 18px;
+  margin-left: 10px;
+  display: inline-block;
+  transform: translateY(-12px);
+  @media screen and (max-width:$tablet){
+    display: none;
+  }
+}
+
+.wrapper__emblems_icon{
+  width: 36px;
+  height: 36px;
+  @media screen and (max-width:$mobile){
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.sitemap__mark_item{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sitemap__sub_item{
+  padding: 16px;
+  border-radius: 6px;
+  background-color: rgb(213, 212, 212);
+  width: auto;
+  display: inline-block;
+  margin-bottom: 10px;
+}
